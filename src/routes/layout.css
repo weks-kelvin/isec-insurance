@@ -1121,7 +1121,7 @@ button {
 .proof-copy small {
   display: block;
   max-width: 680px;
-  margin-top: clamp(76px, 10vw, 150px);
+  margin-top: clamp(76px, 8vw, 0px);
   color: #676767;
   font-size: clamp(1rem, 1.2vw, 1.12rem);
   line-height: 1.3;
