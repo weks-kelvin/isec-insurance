@@ -8,7 +8,13 @@
 	{#each metrics as metric (metric.label)}
 		<article class={`metric-card metric-${metric.tone}`}>
 			{#if metric.image}
-				<img src={imageUrl(metric.image)} alt="" aria-hidden="true" />
+				<img
+					src={imageUrl(metric.image)}
+					alt=""
+					aria-hidden="true"
+					loading="lazy"
+					decoding="async"
+				/>
 			{/if}
 			<div>
 				<strong>{metric.value}</strong>

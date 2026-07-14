@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { coverages } from '$lib/isec-data';
 	import { reveal } from '$lib/actions/reveal';
+	import { trackEvent } from '$lib/utils/analytics';
 	import { imageUrl } from '$lib/utils/assets';
 
 	let {
@@ -12,6 +13,11 @@
 	} = $props();
 
 	const activeCoverage = $derived(coverages[activeCoverageIndex]);
+
+	function handleCoverageSelect(index: number) {
+		selectCoverage(index);
+		trackEvent('coverage_select', { coverage: coverages[index]?.title ?? 'unknown', index });
+	}
 </script>
 
 <div class="cover-panel cover-dropdown reveal is-revealed" id="coverage-menu" use:reveal>
@@ -22,10 +28,15 @@
 				class:is-selected={activeCoverageIndex === index}
 				class="cover-item"
 				type="button"
-				onclick={() => selectCoverage(index)}
+				onclick={() => handleCoverageSelect(index)}
 			>
 				<span class="cover-icon">
-					<img src={imageUrl(coverage.icon)} alt={`${coverage.title} icon`} />
+					<img
+						src={imageUrl(coverage.icon)}
+						alt={`${coverage.title} icon`}
+						loading="lazy"
+						decoding="async"
+					/>
 				</span>
 				<span>
 					<strong>{coverage.title}</strong>
@@ -36,7 +47,13 @@
 	</div>
 
 	<article class="cover-feature">
-		<img src={imageUrl(activeCoverage.previewImage)} alt={activeCoverage.previewTitle} />
+		<img
+			src={imageUrl(activeCoverage.previewImage)}
+			alt={activeCoverage.previewTitle}
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+		/>
 		<span>{activeCoverage.previewTitle}</span>
 	</article>
 </div>

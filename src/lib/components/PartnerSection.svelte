@@ -10,10 +10,10 @@
 	<div class="partner-marquee">
 		<div>
 			{#each partners as partner (partner.name)}
-				<img src={imageUrl(partner.logo)} alt={partner.name} />
+				<img src={imageUrl(partner.logo)} alt={partner.name} loading="lazy" decoding="async" />
 			{/each}
 			{#each partners as partner (`${partner.name}-repeat`)}
-				<img src={imageUrl(partner.logo)} alt={partner.name} />
+				<img src={imageUrl(partner.logo)} alt={partner.name} loading="lazy" decoding="async" />
 			{/each}
 		</div>
 	</div>

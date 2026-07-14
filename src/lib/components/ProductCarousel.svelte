@@ -28,7 +28,13 @@
 				aria-label={`Show ${product.title} insurance`}
 				onclick={() => selectProduct(index)}
 			>
-				<img src={imageUrl(product.image)} alt={`${product.title} insurance`} />
+				<img
+					src={imageUrl(product.image)}
+					alt={`${product.title} insurance`}
+					loading={index <= 1 ? 'eager' : 'lazy'}
+					fetchpriority={index === activeProductIndex ? 'high' : 'low'}
+					decoding="async"
+				/>
 				<span class="product-title">
 					{product.title}
 					{#if index === activeProductIndex}
@@ -37,6 +43,8 @@
 							src={imageUrl('butterfly.svg')}
 							alt=""
 							aria-hidden="true"
+							loading="lazy"
+							decoding="async"
 						/>
 					{/if}
 				</span>

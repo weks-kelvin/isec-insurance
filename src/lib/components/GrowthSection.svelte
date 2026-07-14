@@ -4,8 +4,22 @@
 </script>
 
 <section class="growth-section reveal" id="quote" use:reveal>
-	<img class="shape shape-left" src={imageUrl('Vector (2).svg')} alt="" aria-hidden="true" />
-	<img class="shape shape-right" src={imageUrl('Group.svg')} alt="" aria-hidden="true" />
+	<img
+		class="shape shape-left"
+		src={imageUrl('Vector (2).svg')}
+		alt=""
+		aria-hidden="true"
+		loading="lazy"
+		decoding="async"
+	/>
+	<img
+		class="shape shape-right"
+		src={imageUrl('Group.svg')}
+		alt=""
+		aria-hidden="true"
+		loading="lazy"
+		decoding="async"
+	/>
 
 	<div class="wave" aria-hidden="true"></div>
 	<h1>Coverage<br />That Grows<br />With You</h1>

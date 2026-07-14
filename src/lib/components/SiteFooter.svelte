@@ -6,11 +6,21 @@
 
 <footer class="site-footer">
 	<div class="social-links" aria-label="Social links">
-		<a href="/" aria-label="Facebook"><img src={imageUrl('Social Icons1.svg')} alt="" /></a>
-		<a href="/" aria-label="X"><img src={imageUrl('Social Icons 2.svg')} alt="" /></a>
-		<a href="/" aria-label="Instagram"><img src={imageUrl('Social Icons3.svg')} alt="" /></a>
-		<a href="/" aria-label="LinkedIn"><img src={imageUrl('Social Icons4.svg')} alt="" /></a>
-		<a href="/" aria-label="YouTube"><img src={imageUrl('Vector.svg')} alt="" /></a>
+		<a href="/" aria-label="Facebook"
+			><img src={imageUrl('Social Icons1.svg')} alt="" loading="lazy" decoding="async" /></a
+		>
+		<a href="/" aria-label="X"
+			><img src={imageUrl('Social Icons 2.svg')} alt="" loading="lazy" decoding="async" /></a
+		>
+		<a href="/" aria-label="Instagram"
+			><img src={imageUrl('Social Icons3.svg')} alt="" loading="lazy" decoding="async" /></a
+		>
+		<a href="/" aria-label="LinkedIn"
+			><img src={imageUrl('Social Icons4.svg')} alt="" loading="lazy" decoding="async" /></a
+		>
+		<a href="/" aria-label="YouTube"
+			><img src={imageUrl('Vector.svg')} alt="" loading="lazy" decoding="async" /></a
+		>
 	</div>
 	<div class="footer-legal">
 		<a href="/terms-and-conditions">Terms & Conditions</a>

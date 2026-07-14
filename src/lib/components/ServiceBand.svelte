@@ -16,6 +16,8 @@
 					class="service-icon"
 					src={imageUrl(feature.image)}
 					alt={`${feature.title} icon`}
+					loading="lazy"
+					decoding="async"
 				/>
 				<h3>{feature.title}</h3>
 				<p>{feature.body}</p>
