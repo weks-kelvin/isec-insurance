@@ -27,8 +27,6 @@ npm run dev
 
 ## Available Scripts
 
-| Command | Description |
-| -------- | ----------- |
 | `npm run dev` | Starts the development server. |
 | `npm run build` | Creates a production build. |
 | `npm run preview` | Serves the production build locally. |
