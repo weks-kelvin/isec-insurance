@@ -16,7 +16,12 @@
 </script>
 
 <nav class="site-nav reveal is-revealed">
-	<a class="brand" href="/" aria-label="ISEC Insurance Agency home" onclick={(event) => navigateToSection('top', event)}>
+	<a
+		class="brand"
+		href="/"
+		aria-label="ISEC Insurance Agency home"
+		onclick={(event) => navigateToSection('top', event)}
+	>
 		<span class="brand-mark">
 			isec
 			<img src={imageUrl('butterfly.svg')} alt="" aria-hidden="true" />
@@ -25,7 +30,9 @@
 	</a>
 
 	<div class="nav-links" aria-label="Primary navigation">
-		<button class="nav-link-button" type="button" onclick={toggleCoverageMenu}>Insurance Cover</button>
+		<button class="nav-link-button" type="button" onclick={toggleCoverageMenu}
+			>Insurance Cover</button
+		>
 		<a href="/services" onclick={(event) => navigateToSection('services', event)}>Services</a>
 		<a href="/partners" onclick={(event) => navigateToSection('partners', event)}>Company</a>
 		<a href="/support" onclick={(event) => navigateToSection('support', event)}>Support</a>

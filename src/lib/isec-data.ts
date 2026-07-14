@@ -208,7 +208,8 @@ export const faqs = [
 	},
 	{
 		question: 'Does ISEC help after I buy?',
-		answer: 'Yes. Support agents can guide you through policy questions, renewals, documents, and claim steps.'
+		answer:
+			'Yes. Support agents can guide you through policy questions, renewals, documents, and claim steps.'
 	},
 	{
 		question: 'How fast can I get a quote?',
@@ -221,6 +222,7 @@ export const faqs = [
 	},
 	{
 		question: 'Can businesses use ISEC?',
-		answer: 'Yes. The platform can support individual customers, families, SMEs, and larger organizations.'
+		answer:
+			'Yes. The platform can support individual customers, families, SMEs, and larger organizations.'
 	}
 ] as const;

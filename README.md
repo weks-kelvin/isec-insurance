@@ -1,22 +1,70 @@
 # ISEC Insurance
- ISEC Insurance Agency.
 
-## Development
+A modern insurance agency website built with SvelteKit.
 
-```sh
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js 20+
+- npm
+
+## Getting Started
+
+Clone the repository and install the dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-## Validation
+```
 
-```sh
+## Available Scripts
+
+| Command | Description |
+| -------- | ----------- |
+| `npm run dev` | Starts the development server. |
+| `npm run build` | Creates a production build. |
+| `npm run preview` | Serves the production build locally. |
+| `npm run check` | Runs Svelte type checking and validation. |
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/
+│   ├── assets/
+│   ├── utils/
+│   └── isec-data.ts
+├── routes/
+└── app.html
+```
+
+## Development
+
+Before opening a pull request, it's recommended to run:
+
+```bash
 npm run check
 npm run build
 ```
 
-## Preview
+This helps catch type errors and ensures the application builds successfully.
 
-```sh
-npm run preview
-```
+## Tech Stack
+
+- SvelteKit
+- Svelte 5
+- TypeScript
+- Vite
+
+## License
+
+Internal project for ISEC Insurance.

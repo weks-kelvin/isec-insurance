@@ -31,7 +31,12 @@
 				<span class="product-title">
 					{product.title}
 					{#if index === activeProductIndex}
-						<img class="product-butterfly" src={imageUrl('butterfly.svg')} alt="" aria-hidden="true" />
+						<img
+							class="product-butterfly"
+							src={imageUrl('butterfly.svg')}
+							alt=""
+							aria-hidden="true"
+						/>
 					{/if}
 				</span>
 				{#if index === activeProductIndex}
@@ -54,7 +59,8 @@
 			{/each}
 		</div>
 		<div class="arrows">
-			<button type="button" aria-label="Previous product" onclick={previousProduct}>&lsaquo;</button>
+			<button type="button" aria-label="Previous product" onclick={previousProduct}>&lsaquo;</button
+			>
 			<button type="button" aria-label="Next product" onclick={nextProduct}>&rsaquo;</button>
 		</div>
 	</div>
