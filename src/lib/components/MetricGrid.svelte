@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { metrics } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
 </script>
 
-<section class="metric-grid reveal" aria-label="ISEC proof points">
+<section class="metric-grid reveal" aria-label="ISEC proof points" use:reveal>
 	{#each metrics as metric (metric.label)}
 		<article class={`metric-card metric-${metric.tone}`}>
 			{#if metric.image}

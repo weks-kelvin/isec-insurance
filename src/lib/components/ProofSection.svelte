@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { testimonials } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 </script>
 
-<section class="proof-section reveal">
+<section class="proof-section reveal" use:reveal>
 	<div class="proof-copy">
 		<p class="review-pill">Excellent 4.8 out of 5 by <span>&#9733;</span> Google Review</p>
 		<h2>Proof is in the progress.</h2>

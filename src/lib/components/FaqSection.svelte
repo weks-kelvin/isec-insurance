@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { faqs } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 
 	let {
 		openFaqIndex,
@@ -10,7 +11,7 @@
 	} = $props();
 </script>
 
-<section class="faq-section reveal" id="support">
+<section class="faq-section reveal" id="support" use:reveal>
 	<div class="faq-inner">
 		<h2>Frequently asked questions</h2>
 		<p>

@@ -22,34 +22,12 @@
 	let scrollProgress = $state(0);
 	let productTimer: ReturnType<typeof setInterval> | undefined;
 
-	function pathForSection(sectionId: SectionId) {
-		return sectionId === 'top' ? '/' : `/${sectionId}`;
+	function sectionHref(sectionId: SectionId) {
+		return sectionId === 'top' ? '#top' : `#${sectionId}`;
 	}
 
-	function sectionFromPath(pathname: string): SectionId {
-		const cleanPath = pathname.replace(/^\/|\/$/g, '');
-		if (
-			cleanPath === 'cover' ||
-			cleanPath === 'services' ||
-			cleanPath === 'quote' ||
-			cleanPath === 'partners' ||
-			cleanPath === 'support'
-		) {
-			return cleanPath;
-		}
-
-		return 'top';
-	}
-
-	function scrollToSection(sectionId: SectionId, behavior: ScrollBehavior) {
-		document.getElementById(sectionId)?.scrollIntoView({ behavior, block: 'start' });
-	}
-
-	function navigateToSection(sectionId: SectionId, event: MouseEvent) {
-		event.preventDefault();
+	function closeCoverageMenu() {
 		isCoverageMenuOpen = false;
-		window.history.pushState(null, '', pathForSection(sectionId));
-		scrollToSection(sectionId, 'smooth');
 	}
 
 	function syncScrollState() {
@@ -60,6 +38,7 @@
 
 	function nextProduct() {
 		activeProductIndex = (activeProductIndex + 1) % products.length;
+		restartProductTimer();
 	}
 
 	function previousProduct() {
@@ -84,34 +63,16 @@
 
 	onMount(() => {
 		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		const handlePopState = () =>
-			scrollToSection(sectionFromPath(window.location.pathname), 'smooth');
-		const observer = new IntersectionObserver(
-			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-revealed');
-						observer.unobserve(entry.target);
-					}
-				}
-			},
-			{ threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
-		);
 
-		document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 		syncScrollState();
-		window.setTimeout(() => scrollToSection(sectionFromPath(window.location.pathname), 'auto'));
 		window.addEventListener('scroll', syncScrollState, { passive: true });
-		window.addEventListener('popstate', handlePopState);
 
 		if (!reduceMotion) {
 			productTimer = setInterval(nextProduct, 20000);
 		}
 
 		return () => {
-			observer.disconnect();
 			window.removeEventListener('scroll', syncScrollState);
-			window.removeEventListener('popstate', handlePopState);
 			if (productTimer) clearInterval(productTimer);
 		};
 	});
@@ -136,8 +97,9 @@
 		<div class="ambient ambient-two"></div>
 
 		<SiteNav
+			{closeCoverageMenu}
 			{isCoverageMenuOpen}
-			{navigateToSection}
+			{sectionHref}
 			toggleCoverageMenu={() => (isCoverageMenuOpen = !isCoverageMenuOpen)}
 		/>
 
@@ -155,7 +117,7 @@
 		<MetricGrid />
 	</section>
 
-	<FloatingSectionNav {navigateToSection} {showFloatingNav} />
+	<FloatingSectionNav {closeCoverageMenu} {sectionHref} {showFloatingNav} />
 	<PartnerSection />
 	<ProofSection />
 	<FaqSection {openFaqIndex} {toggleFaq} />

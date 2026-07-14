@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { supportFeatures } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
 </script>
 
-<section class="service-band reveal" id="services">
+<section class="service-band reveal" id="services" use:reveal>
 	<h2>We offer a variety of products customer designed for all your insurance needs being;</h2>
 	<div class="service-grid">
 		{#each supportFeatures as feature, index (feature.title)}

@@ -1,26 +1,29 @@
 <script lang="ts">
 	import type { SectionId } from '$lib/isec-data';
 	import { imageUrl } from '$lib/utils/assets';
+	import { reveal } from '$lib/actions/reveal';
 
-	type NavigateToSection = (sectionId: SectionId, event: MouseEvent) => void;
+	type SectionHref = (sectionId: SectionId) => string;
 
 	let {
+		closeCoverageMenu,
 		isCoverageMenuOpen,
-		navigateToSection,
+		sectionHref,
 		toggleCoverageMenu
 	}: {
+		closeCoverageMenu: () => void;
 		isCoverageMenuOpen: boolean;
-		navigateToSection: NavigateToSection;
+		sectionHref: SectionHref;
 		toggleCoverageMenu: () => void;
 	} = $props();
 </script>
 
-<nav class="site-nav reveal is-revealed">
+<nav class="site-nav reveal is-revealed" use:reveal>
 	<a
 		class="brand"
-		href="/"
+		href={sectionHref('top')}
 		aria-label="ISEC Insurance Agency home"
-		onclick={(event) => navigateToSection('top', event)}
+		onclick={closeCoverageMenu}
 	>
 		<span class="brand-mark">
 			isec
@@ -33,9 +36,9 @@
 		<button class="nav-link-button" type="button" onclick={toggleCoverageMenu}
 			>Insurance Cover</button
 		>
-		<a href="/services" onclick={(event) => navigateToSection('services', event)}>Services</a>
-		<a href="/partners" onclick={(event) => navigateToSection('partners', event)}>Company</a>
-		<a href="/support" onclick={(event) => navigateToSection('support', event)}>Support</a>
+		<a href={sectionHref('services')} onclick={closeCoverageMenu}>Services</a>
+		<a href={sectionHref('partners')} onclick={closeCoverageMenu}>Company</a>
+		<a href={sectionHref('support')} onclick={closeCoverageMenu}>Support</a>
 	</div>
 
 	<div class="nav-actions">

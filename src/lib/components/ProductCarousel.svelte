@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { products } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
 
 	let {
@@ -15,7 +16,7 @@
 	} = $props();
 </script>
 
-<section class="product-stage reveal" id="cover" aria-label="Insurance products">
+<section class="product-stage reveal" id="cover" aria-label="Insurance products" use:reveal>
 	<div class="product-track">
 		{#each products as product, index (`${product.title}-${index}`)}
 			<button

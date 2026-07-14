@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
 </script>
 
-<section class="growth-section reveal" id="quote">
+<section class="growth-section reveal" id="quote" use:reveal>
 	<img class="shape shape-left" src={imageUrl('Vector (2).svg')} alt="" aria-hidden="true" />
 	<img class="shape shape-right" src={imageUrl('Group.svg')} alt="" aria-hidden="true" />
 

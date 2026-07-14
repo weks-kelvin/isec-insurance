@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { coverages } from '$lib/isec-data';
+	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
 
 	let {
@@ -13,7 +14,7 @@
 	const activeCoverage = $derived(coverages[activeCoverageIndex]);
 </script>
 
-<div class="cover-panel cover-dropdown reveal is-revealed" id="coverage-menu">
+<div class="cover-panel cover-dropdown reveal is-revealed" id="coverage-menu" use:reveal>
 	<div class="cover-list">
 		<p class="eyebrow">Insurance Cover</p>
 		{#each coverages as coverage, index (coverage.title)}

@@ -1,23 +1,25 @@
 <script lang="ts">
 	import type { SectionId } from '$lib/isec-data';
 
-	type NavigateToSection = (sectionId: SectionId, event: MouseEvent) => void;
+	type SectionHref = (sectionId: SectionId) => string;
 
 	let {
-		navigateToSection,
+		closeCoverageMenu,
+		sectionHref,
 		showFloatingNav
 	}: {
-		navigateToSection: NavigateToSection;
+		closeCoverageMenu: () => void;
+		sectionHref: SectionHref;
 		showFloatingNav: boolean;
 	} = $props();
 </script>
 
 <nav class:is-visible={showFloatingNav} class="floating-section-nav" aria-label="Page sections">
-	<a href="/services" onclick={(event) => navigateToSection('services', event)}>Features</a>
-	<a href="/quote" onclick={(event) => navigateToSection('quote', event)}>Plans</a>
-	<a href="/quote" onclick={(event) => navigateToSection('quote', event)}>Pricing</a>
-	<a href="/cover" onclick={(event) => navigateToSection('cover', event)}>What's covered</a>
-	<a href="/partners" onclick={(event) => navigateToSection('partners', event)}>Partners</a>
-	<a href="/support" onclick={(event) => navigateToSection('support', event)}>FAQs</a>
-	<a class="back-top" href="/" onclick={(event) => navigateToSection('top', event)}>Back to top</a>
+	<a href={sectionHref('services')} onclick={closeCoverageMenu}>Features</a>
+	<a href={sectionHref('quote')} onclick={closeCoverageMenu}>Plans</a>
+	<a href={sectionHref('quote')} onclick={closeCoverageMenu}>Pricing</a>
+	<a href={sectionHref('cover')} onclick={closeCoverageMenu}>What's covered</a>
+	<a href={sectionHref('partners')} onclick={closeCoverageMenu}>Partners</a>
+	<a href={sectionHref('support')} onclick={closeCoverageMenu}>FAQs</a>
+	<a class="back-top" href={sectionHref('top')} onclick={closeCoverageMenu}>Back to top</a>
 </nav>
