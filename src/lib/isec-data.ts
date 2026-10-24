@@ -45,7 +45,7 @@ export const coverages: readonly CoverageCategory[] = [
 		previewImage: 'Screenshot 2026-04-27 at 21.39.26 1.svg'
 	},
 	{
-		title: 'Renters Insurance',
+		title: 'Personal Accident Insurance',
 		description: "Protect tenants' belongings in rented homes or apartments.",
 		icon: '6897 5.svg',
 		previewTitle: 'Renters Cover',
@@ -66,10 +66,10 @@ export const coverages: readonly CoverageCategory[] = [
 		previewImage: 'Screenshot 2026-04-27 at 21.39.26 1.svg'
 	},
 	{
-		title: 'Pet Insurance',
-		description: 'Veterinary treatment and medical care for pets.',
+		title: 'Motor Insurance',
+		description: 'Coverage for private cars, commercial fleets, and daily movement.',
 		icon: '6897 8.svg',
-		previewTitle: 'Pet Insurance',
+		previewTitle: 'Motor Insurance',
 		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
 	},
 	{
@@ -103,9 +103,14 @@ export const products: readonly ProductCard[] = [
 		image: 'car-guy.png'
 	},
 	{
-		title: 'Business',
-		body: 'Get your SMEs, Mid-size & Corporate businesses insured today.',
-		image: 'family.jpg'
+		title: 'Travel',
+		body: 'We cover trip cancellations, medical emergencies, and lost luggage.',
+		image: 'travel_insurance.jpg'
+	},
+	{
+		title: 'Travel',
+		body: 'We cover trip cancellations, medical emergencies, and lost luggage.',
+		image: 'travel_insurance.jpg'
 	}
 ];
 
@@ -199,7 +204,7 @@ export const faqs = [
 	{
 		question: 'Who am I buying my policy from?',
 		answer:
-			'You buy directly from the licensed insurer shown in your selected quote. ISEC helps you compare, understand, and complete the process.'
+			'You buy directly from the licensed insurer shown in your selected quote. I-Sec helps you compare, understand, and complete the process.'
 	},
 	{
 		question: 'Can I compare several insurance covers?',
@@ -207,7 +212,7 @@ export const faqs = [
 			'Yes. The experience is designed to compare different providers and coverage types side by side before you commit.'
 	},
 	{
-		question: 'Does ISEC help after I buy?',
+		question: 'Does I-Sec help after I buy?',
 		answer:
 			'Yes. Support agents can guide you through policy questions, renewals, documents, and claim steps.'
 	},
@@ -221,7 +226,7 @@ export const faqs = [
 			'Quotes depend on eligibility, provider review, and final policy terms. The final policy document is the binding reference.'
 	},
 	{
-		question: 'Can businesses use ISEC?',
+		question: 'Can businesses use I-Sec?',
 		answer:
 			'Yes. The platform can support individual customers, families, SMEs, and larger organizations.'
 	}

@@ -25,6 +25,6 @@
 	<div class="footer-legal">
 		<a href="/terms-and-conditions">Terms & Conditions</a>
 		<a href="/privacy-policy">Privacy Policy</a>
-		<span>&copy;{currentYear}, ISEC Insurance. All rights reserved.</span>
+		<span>&copy;{currentYear}, I-Sec Insurance Agency. All rights reserved.</span>
 	</div>
 </footer>

@@ -53,7 +53,11 @@
 	</div>
 
 	<div class="nav-actions">
-		<a class="message-link" href="mailto:hello@isec.co.ke" aria-label="Send message">
+		<a
+			class="message-link"
+			href="mailto:info@isecinsuranceagency.com"
+			aria-label="Send message"
+		>
 			<img src={imageUrl('mail.svg')} alt="" loading="lazy" decoding="async" />
 			<span>Send message</span>
 		</a>

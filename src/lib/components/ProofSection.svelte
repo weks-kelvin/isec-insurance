@@ -9,7 +9,7 @@
 		<h2>Proof is in the progress.</h2>
 		<p class="proof-lead">Our members make progress, feel peace of mind, and spread the word.</p>
 		<small>
-			Ratings and reviews are provided by customers of ISEC Insurance and may not represent the
+			Ratings and reviews are provided by customers of I-Sec Insurance and may not represent the
 			experience of all clients. No compensation was provided for reviews. Testimonials and ratings
 			are for informational purposes only and are not indicative of future results or experiences.
 			Individual savings and coverage outcomes may vary.

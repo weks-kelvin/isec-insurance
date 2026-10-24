@@ -15,7 +15,7 @@
 	<div class="faq-inner">
 		<h2>Frequently asked questions</h2>
 		<p>
-			Questions on the ISEC Insurance? Find your answers below. For any further help or
+			Questions on the I-Sec Insurance? Find your answers below. For any further help or
 			troubleshooting, please contact customer service.
 		</p>
 
