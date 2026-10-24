@@ -66,18 +66,18 @@ export const coverages: readonly CoverageCategory[] = [
 		previewImage: 'marine-cargo.jpg'
 	},
 	{
-		title: 'Motor Insurance',
-		description: 'Coverage for private cars, commercial fleets, and daily movement.',
-		icon: '6897 8.svg',
-		previewTitle: 'Motor Insurance',
-		previewImage: 'car-guy.png'
-	},
-	{
 		title: 'Travel Insurance',
 		description: 'Trip cancellations, medical emergencies, and lost luggage.',
 		icon: '6897 2.svg',
 		previewTitle: 'Travel Insurance',
 		previewImage: 'travel_insurance.jpg'
+	},
+	{
+		title: 'Motor Insurance',
+		description: 'Coverage for private cars, commercial fleets, and daily movement.',
+		icon: '6897 8.svg',
+		previewTitle: 'Motor Insurance',
+		previewImage: 'car-guy.png'
 	}
 ];
 
