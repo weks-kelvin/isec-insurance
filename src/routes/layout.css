@@ -1687,6 +1687,7 @@ button {
 		justify-content: flex-start;
 		gap: 10px;
 		width: 100%;
+		margin-top: 30px;
 	}
 
 	.message-link {
@@ -1732,7 +1733,6 @@ button {
 
 	.landing-hero {
 		min-height: 0;
-		padding-top: 64px;
 	}
 
 	.hero-pill {
@@ -1862,3 +1862,142 @@ button {
 	z-index: 999;
 	transition: transform 100ms linear;
 }
+
+.quote-modal-backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 1200;
+	display: grid;
+	place-items: center;
+	padding: 20px;
+	background: transparent;
+	backdrop-filter: none;
+}
+
+.quote-modal-dismiss {
+	position: absolute;
+	inset: 0;
+	background: rgb(10 12 18 / 45%);
+	backdrop-filter: blur(2px);
+}
+
+.quote-modal {
+	position: relative;
+	margin: 0;
+	width: min(100%, 640px);
+	overflow: hidden;
+	border: 0;
+	border: 1px solid #dfe3e8;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 24px 56px rgb(0 0 0 / 26%);
+}
+
+.quote-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 24px;
+	color: #fff;
+	background: var(--ink);
+}
+
+.quote-modal-header h2 {
+	margin: 0;
+	font-size: clamp(1.4rem, 1.9vw, 1.9rem);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.quote-modal-close {
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	border-radius: 999px;
+	color: #fff;
+	background: rgb(255 255 255 / 12%);
+	font-size: 1.7rem;
+	line-height: 1;
+}
+
+.quote-form {
+	display: grid;
+	gap: 18px;
+	padding: 24px;
+	background: #fff;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+	width: 100%;
+	border: 1px solid #e2e6eb;
+	border-radius: 7px;
+	padding: 12px 14px;
+	color: #1f2430;
+	background: #fbfcfe;
+	font-size: 1.02rem;
+}
+
+.quote-form textarea {
+	resize: vertical;
+	min-height: 124px;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+	outline: 2px solid rgb(150 11 10 / 22%);
+	border-color: var(--ink);
+}
+
+.quote-form-actions {
+	display: flex;
+	gap: 12px;
+	justify-content: flex-start;
+	padding-top: 6px;
+}
+
+.quote-submit,
+.quote-clear {
+	min-height: 46px;
+	padding: 0 22px;
+	border-radius: 999px;
+	font-size: 0.95rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	cursor: pointer;
+}
+
+.quote-submit {
+	color: #fff;
+	background: var(--ink);
+}
+
+.quote-clear {
+	color: #2a2f3b;
+	border: 1px solid #d9dde4;
+	background: #f5f7fb;
+}
+
+@media (max-width: 760px) {
+	.quote-modal-backdrop {
+		padding: 10px;
+	}
+
+	.quote-modal-header,
+	.quote-form {
+		padding: 16px;
+	}
+
+	.quote-form-actions {
+		flex-direction: column;
+	}
+
+	.quote-submit,
+	.quote-clear {
+		width: 100%;
+	}
+}
+

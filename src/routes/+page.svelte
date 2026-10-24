@@ -6,9 +6,10 @@
 	import LandingHero from '$lib/components/LandingHero.svelte';
 	import MetricGrid from '$lib/components/MetricGrid.svelte';
 	import ProductCarousel from '$lib/components/ProductCarousel.svelte';
+	import QuoteRequestModal from '$lib/components/QuoteRequestModal.svelte';
 	import ServiceBand from '$lib/components/ServiceBand.svelte';
 	import SiteNav from '$lib/components/SiteNav.svelte';
-	import { products, type SectionId } from '$lib/isec-data';
+	import { coverages, products, type SectionId } from '$lib/isec-data';
 	import { trackEvent } from '$lib/utils/analytics';
 	import { boundedIndex, nextIndex, previousIndex } from '$lib/utils/carousel';
 
@@ -18,6 +19,7 @@
 	let activeCoverageIndex = $state(0);
 	let openFaqIndex = $state<number | null>(0);
 	let scrollProgress = $state(0);
+	let isQuoteModalOpen = $state(false);
 	let productTimer: ReturnType<typeof setInterval> | undefined;
 	let scrollFrame: number | undefined;
 
@@ -130,9 +132,13 @@
 		<LandingHero />
 		<ProductCarousel {activeProductIndex} {nextProduct} {previousProduct} {selectProduct} />
 		<ServiceBand />
-		<GrowthSection />
+		<GrowthSection openQuoteModal={() => (isQuoteModalOpen = true)} />
 		<MetricGrid />
 	</section>
+
+	{#if isQuoteModalOpen}
+		<QuoteRequestModal onClose={() => (isQuoteModalOpen = false)} services={coverages.map((item) => item.title)} />
+	{/if}
 
 	<FloatingSectionNav {closeCoverageMenu} {sectionHref} {showFloatingNav} />
 	{#await partnerSectionModule then { default: PartnerSection }}

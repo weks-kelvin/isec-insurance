@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { reveal } from '$lib/actions/reveal';
 	import { imageUrl } from '$lib/utils/assets';
+
+	let { openQuoteModal }: { openQuoteModal: () => void } = $props();
 </script>
 
 <section class="growth-section reveal" id="quote" use:reveal>
@@ -13,7 +15,7 @@
 		Whether you need car, home, health, travel, or business insurance, we help you find flexible
 		protection tailored to your lifestyle and budget.
 	</p>
-	<a class="primary-button large" href="mailto:info@isecinsuranceagency.com"
-		>Customise your quote <span aria-hidden="true">&rsaquo;</span></a
+	<button class="primary-button large" type="button" onclick={openQuoteModal}
+		>Customise your quote <span aria-hidden="true">&rsaquo;</span></button
 	>
 </section>
