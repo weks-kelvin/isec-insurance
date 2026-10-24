@@ -33,11 +33,11 @@
 	<a
 		class="brand"
 		href={sectionHref('top')}
-		aria-label="ISEC Insurance Agency home"
+		aria-label="I-SEC Insurance Agency home"
 		onclick={() => handleNavClick('top')}
 	>
 		<span class="brand-mark">
-			isec
+			I-Sec
 			<img src={imageUrl('butterfly.svg')} alt="" aria-hidden="true" decoding="async" />
 		</span>
 		<span class="brand-text">Insurance<br />Agency</span>

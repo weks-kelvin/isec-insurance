@@ -96,7 +96,7 @@
 </script>
 
 <svelte:head>
-	<title>ISEC Insurance Agency</title>
+	<title>I-SEC Insurance Agency</title>
 	<meta
 		name="description"
 		content="Compare insurance covers from trusted partners and find flexible protection for life, medical, motor, business, and more."

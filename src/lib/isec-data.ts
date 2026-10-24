@@ -34,8 +34,8 @@ export const coverages: readonly CoverageCategory[] = [
 		title: 'Education Insurance',
 		description: "Plan ahead for a child's future education expenses.",
 		icon: '6897 2.svg',
-		previewTitle: 'Education Cover',
-		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
+		previewTitle: 'Education Insurance',
+		previewImage: 'education.jpg'
 	},
 	{
 		title: 'Health Insurance',
@@ -46,38 +46,38 @@ export const coverages: readonly CoverageCategory[] = [
 	},
 	{
 		title: 'Personal Accident Insurance',
-		description: "Protect tenants' belongings in rented homes or apartments.",
+		description: "Coverage for injuries, disabilities, or death resulting from accidents.",
 		icon: '6897 5.svg',
-		previewTitle: 'Renters Cover',
-		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
+		previewTitle: 'Personal Accident Insurance',
+		previewImage: 'personal_accident.jpg'
 	},
 	{
 		title: 'Home Insurance',
 		description: 'Damage or loss to a house and belongings due to fire, theft, or disasters.',
 		icon: '6897 6.svg',
 		previewTitle: 'Home Insurance',
-		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
+		previewImage: 'home_insurance.jpg'
 	},
 	{
 		title: 'Marine Insurance',
 		description: 'Ships, cargo, and goods transported by sea or waterways.',
 		icon: '6897 7.svg',
-		previewTitle: 'Marine Cover',
-		previewImage: 'Screenshot 2026-04-27 at 21.39.26 1.svg'
+		previewTitle: 'Marine Insurance',
+		previewImage: 'marine-cargo.jpg'
 	},
 	{
 		title: 'Motor Insurance',
 		description: 'Coverage for private cars, commercial fleets, and daily movement.',
 		icon: '6897 8.svg',
 		previewTitle: 'Motor Insurance',
-		previewImage: 'Screenshot 2026-04-27 at 21.35.44 1.svg'
+		previewImage: 'car-guy.png'
 	},
 	{
 		title: 'Travel Insurance',
 		description: 'Trip cancellations, medical emergencies, and lost luggage.',
 		icon: '6897 2.svg',
-		previewTitle: 'Motor Insurance',
-		previewImage: 'Screenshot 2026-04-27 at 21.40.50 1.svg'
+		previewTitle: 'Travel Insurance',
+		previewImage: 'travel_insurance.jpg'
 	}
 ];
 
@@ -101,11 +101,6 @@ export const products: readonly ProductCard[] = [
 		title: 'Motor',
 		body: 'Trusted cover for private cars, commercial fleets, and daily movement.',
 		image: 'car-guy.png'
-	},
-	{
-		title: 'Travel',
-		body: 'We cover trip cancellations, medical emergencies, and lost luggage.',
-		image: 'travel_insurance.jpg'
 	},
 	{
 		title: 'Travel',
