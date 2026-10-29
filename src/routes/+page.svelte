@@ -129,7 +129,7 @@
 			/>
 		{/if}
 
-		<LandingHero />
+		<LandingHero openQuoteModal={() => (isQuoteModalOpen = true)} />
 		<ProductCarousel {activeProductIndex} {nextProduct} {previousProduct} {selectProduct} />
 		<ServiceBand />
 		<GrowthSection openQuoteModal={() => (isQuoteModalOpen = true)} />

@@ -165,11 +165,13 @@ export const metrics: readonly MetricCard[] = [
 
 export const partners = [
 	{ name: 'Sanlam', logo: 'image 1.svg' },
-	{ name: 'GA Insurance', logo: 'Ga.svg' },
+	{ name: 'CIC Insurance', logo: 'cic-insurance.png' },
 	{ name: 'Fidelity Insurance', logo: 'fidelity.svg' },
 	{ name: 'Takaful Insurance', logo: 'Vector (2).svg' },
 	{ name: 'Jubilee', logo: 'image 5.svg' },
-	{ name: 'APA', logo: 'apa.png' }
+	{ name: 'APA', logo: 'apa.png' },
+	{ name: 'Mayfair Insurance', logo: 'mayfair.png' },
+	{ name: 'Pioneer Insurance', logo: 'pioneer-insurance.png' }
 ] as const;
 
 export const testimonials = [

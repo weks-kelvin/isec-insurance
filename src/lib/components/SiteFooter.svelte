@@ -22,6 +22,24 @@
 			><img src={imageUrl('Vector.svg')} alt="" loading="lazy" decoding="async" /></a
 		>
 	</div>
+	<div class="footer-contact" aria-label="Contact details">
+		<a class="contact-item" href="tel:+254113821287" aria-label="Call +254 113 821287">
+			<span class="contact-icon" aria-hidden="true">
+				<svg viewBox="0 0 24 24" focusable="false">
+					<path
+						d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.11.37 2.3.56 3.52.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.75 21 3 13.25 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.19 2.41.56 3.52a1 1 0 0 1-.24 1.02z"
+					></path>
+				</svg>
+			</span>
+			<span>+254 113 821287</span>
+		</a>
+		<a class="contact-item" href="mailto:info@isecinsuranceagency.com" aria-label="Email info@isecinsuranceagency.com">
+			<span class="contact-icon" aria-hidden="true">
+				<img src={imageUrl('mail.svg')} alt="" loading="lazy" decoding="async" />
+			</span>
+			<span>info@isecinsuranceagency.com</span>
+		</a>
+	</div>
 	<div class="footer-legal">
 		<a href="/terms-and-conditions">Terms & Conditions</a>
 		<a href="/privacy-policy">Privacy Policy</a>

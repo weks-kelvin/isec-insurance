@@ -36,11 +36,12 @@
 		aria-label="I-SEC Insurance Agency home"
 		onclick={() => handleNavClick('top')}
 	>
-		<span class="brand-mark">
-			I-Sec
-			<img src={imageUrl('butterfly.svg')} alt="" aria-hidden="true" decoding="async" />
-		</span>
-		<span class="brand-text">Insurance<br />Agency</span>
+		<img
+			class="brand-logo"
+			src={imageUrl('i-sec.png')}
+			alt="I-SEC Insurance Agency"
+			decoding="async"
+		/>
 	</a>
 
 	<div class="nav-links" aria-label="Primary navigation">
@@ -50,6 +51,7 @@
 		<a href={sectionHref('services')} onclick={() => handleNavClick('services')}>Services</a>
 		<a href={sectionHref('partners')} onclick={() => handleNavClick('partners')}>Company</a>
 		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Support</a>
+		<a href={sectionHref('support')} onclick={() => handleNavClick('support')}>Contact Us</a>
 	</div>
 
 	<div class="nav-actions">

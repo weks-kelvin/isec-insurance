@@ -10,29 +10,40 @@
 	let name = $state('');
 	let email = $state('');
 	let phone = $state('');
+	let other = $state('');
 	let service = $state('');
 	let message = $state('');
+	const OTHER_SERVICE_VALUE = 'Other';
+
+	$effect(() => {
+		service;
+		if (service !== OTHER_SERVICE_VALUE) {
+			other = '';
+		}
+	});
 
 	function clearAll() {
 		name = '';
 		email = '';
 		phone = '';
+		other = '';
 		service = '';
 		message = '';
 	}
 
 	function submitForm(event: SubmitEvent) {
 		event.preventDefault();
+		const selectedService = service === OTHER_SERVICE_VALUE ? `Other - ${other}` : service;
 		const body = [
 			`Name: ${name}`,
 			`Email: ${email}`,
 			`Phone: ${phone}`,
-			`Service: ${service}`,
+			`Service: ${selectedService}`,
 			'',
 			'Message:',
 			message
 		].join('\n');
-		const subject = encodeURIComponent('Quote request from website');
+		const subject = encodeURIComponent('I-sec Insurance Quote request');
 		const encodedBody = encodeURIComponent(body);
 		window.location.href = `mailto:info@isecinsuranceagency.com?subject=${subject}&body=${encodedBody}`;
 	}
@@ -54,7 +65,7 @@
 	></button>
 	<dialog class="quote-modal" open aria-labelledby="quote-modal-title">
 		<header class="quote-modal-header">
-			<h2 id="quote-modal-title">Get a free quote</h2>
+			<h2 id="quote-modal-title">Get a free quote today</h2>
 			<button type="button" class="quote-modal-close" onclick={onClose} aria-label="Close quote form"
 				>&times;</button
 			>
@@ -69,8 +80,14 @@
 				{#each services as item}
 					<option value={item}>{item}</option>
 				{/each}
+				{#if !services.includes(OTHER_SERVICE_VALUE)}
+					<option value={OTHER_SERVICE_VALUE}>{OTHER_SERVICE_VALUE}</option>
+				{/if}
 			</select>
-			<textarea rows="5" placeholder="Message" bind:value={message} required></textarea>
+			{#if service === OTHER_SERVICE_VALUE}
+				<input type="text" placeholder="Other service not listed" bind:value={other} required />
+			{/if}
+			<textarea rows="5" placeholder="Description" bind:value={message} required></textarea>
 			<div class="quote-form-actions">
 				<button type="submit" class="quote-submit">Get free quote</button>
 				<button type="button" class="quote-clear" onclick={clearAll}>Clear all</button>
